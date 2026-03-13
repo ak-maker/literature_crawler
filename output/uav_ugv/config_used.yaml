@@ -1,0 +1,151 @@
+relevance_keywords:
+  critical:
+  - UAV-UGV
+  - UAV UGV
+  - aerial-ground
+  - aerial ground
+  - air-ground
+  - air ground
+  high:
+  - UAV
+  - UGV
+  - unmanned aerial
+  - unmanned ground
+  - heterogeneous robot
+  - coordination
+  - cooperative
+  - collaboration
+  - formation control
+  - synchronization
+  max_score: 45
+  medium:
+  - multi-robot
+  - multi-agent
+  - swarm
+  - path planning
+  - trajectory
+  - decentralized
+  - distributed
+  - communication
+  - consensus
+  - velocity control
+  - reinforcement learning
+  - model predictive
+  - task allocation
+scoring_weights:
+  bonus_code: 15
+  bonus_demo: 15
+  impact_max: 10
+  relevance_max: 45
+  venue_max: 15
+search_queries:
+- arxiv_categories:
+  - cs.RO
+  - cs.MA
+  - cs.SY
+  keywords:
+  - UAV UGV collaboration
+  - UAV UGV coordination
+  - UAV UGV cooperative
+  - aerial ground robot cooperation
+  - air ground collaborative robot
+  - heterogeneous aerial ground coordination
+  - unmanned aerial ground vehicle cooperation
+  - UAV UGV formation
+  max_results_per_keyword: 40
+  name: Core UAV-UGV Collaboration
+- arxiv_categories:
+  - cs.RO
+  - cs.SY
+  - cs.MA
+  keywords:
+  - UAV UGV synchronization control
+  - aerial ground robot velocity control
+  - UAV UGV consensus control
+  - UAV UGV formation control
+  - aerial ground cooperative path planning
+  - UAV UGV trajectory coordination
+  - UAV UGV communication coordination
+  max_results_per_keyword: 30
+  name: UAV-UGV Control and Synchronization
+- arxiv_categories:
+  - cs.RO
+  - cs.AI
+  - cs.LG
+  - cs.MA
+  keywords:
+  - reinforcement learning UAV UGV
+  - deep learning aerial ground coordination
+  - multi agent learning UAV UGV
+  - graph neural network aerial ground robot
+  - learning based heterogeneous aerial ground
+  - diffusion model UAV UGV planning
+  max_results_per_keyword: 25
+  name: Learning-based UAV-UGV Coordination
+- arxiv_categories:
+  - cs.RO
+  - cs.SY
+  keywords:
+  - model predictive control UAV UGV
+  - optimal control aerial ground robot
+  - potential field UAV UGV
+  - Lyapunov UAV UGV cooperation
+  - decentralized control aerial ground
+  max_results_per_keyword: 20
+  name: Model-based UAV-UGV Control
+- arxiv_categories:
+  - cs.RO
+  - cs.MA
+  - cs.AI
+  keywords:
+  - swarm coordination aerial ground
+  - multi robot communication aerial ground
+  - heterogeneous swarm UAV UGV
+  - multi agent task allocation UAV UGV
+  - distributed coordination heterogeneous aerial ground
+  max_results_per_keyword: 20
+  name: Multi-Agent Theory for Aerial-Ground
+venue_tiers:
+  tier1:
+    patterns:
+    - \bICRA\b
+    - \bIROS\b
+    - \bRA-?L\b
+    - Robotics and Automation Letters
+    - \bRSS\b
+    - \bCoRL\b
+    - \bIJRR\b
+    - International Journal of Robotics Research
+    - \bT-?RO\b
+    - Transactions on Robotics
+    - Science Robotics
+    - \bNeurIPS\b
+    - \bNIPS\b
+    - \bICML\b
+    - \bICLR\b
+    - \bCVPR\b
+    - \bAAAI\b
+    - \bIJCAI\b
+    score: 15
+  tier2:
+    patterns:
+    - \bAAMAS\b
+    - \bECCV\b
+    - \bICCV\b
+    - Autonomous Robots
+    - \bCDC\b
+    - \bACC\b
+    - \bIFAC\b
+    - \bRLC\b
+    - \bICUAS\b
+    - \bWAFR\b
+    - \bISRR\b
+    score: 10
+  tier3:
+    patterns:
+    - \bAIAA\b
+    - \bECC\b
+    - \bROBIO\b
+    - \bSII\b
+    - Workshop
+    score: 5
