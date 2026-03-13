@@ -1,0 +1,176 @@
+# =============================================================
+# UAV-UGV Collaboration Literature Review
+# =============================================================
+# All queries anchored to UAV-UGV / aerial-ground context.
+#
+# Usage:
+#   cd lit_review
+#   python pipeline.py searches/uav_ugv.yaml
+# =============================================================
+
+search_queries:
+  # --- Block 1: Core UAV-UGV collaboration ---
+  - name: "Core UAV-UGV Collaboration"
+    keywords:
+      - "UAV UGV collaboration"
+      - "UAV UGV coordination"
+      - "UAV UGV cooperative"
+      - "aerial ground robot cooperation"
+      - "air ground collaborative robot"
+      - "heterogeneous aerial ground coordination"
+      - "unmanned aerial ground vehicle cooperation"
+      - "UAV UGV formation"
+    max_results_per_keyword: 40
+    arxiv_categories: ["cs.RO", "cs.MA", "cs.SY"]
+
+  # --- Block 2: UAV-UGV control & synchronization ---
+  - name: "UAV-UGV Control and Synchronization"
+    keywords:
+      - "UAV UGV synchronization control"
+      - "aerial ground robot velocity control"
+      - "UAV UGV consensus control"
+      - "UAV UGV formation control"
+      - "aerial ground cooperative path planning"
+      - "UAV UGV trajectory coordination"
+      - "UAV UGV communication coordination"
+    max_results_per_keyword: 30
+    arxiv_categories: ["cs.RO", "cs.SY", "cs.MA"]
+
+  # --- Block 3: Learning-based methods FOR UAV-UGV ---
+  - name: "Learning-based UAV-UGV Coordination"
+    keywords:
+      - "reinforcement learning UAV UGV"
+      - "deep learning aerial ground coordination"
+      - "multi agent learning UAV UGV"
+      - "graph neural network aerial ground robot"
+      - "learning based heterogeneous aerial ground"
+      - "diffusion model UAV UGV planning"
+    max_results_per_keyword: 25
+    arxiv_categories: ["cs.RO", "cs.AI", "cs.LG", "cs.MA"]
+
+  # --- Block 4: Model-based methods FOR UAV-UGV ---
+  - name: "Model-based UAV-UGV Control"
+    keywords:
+      - "model predictive control UAV UGV"
+      - "optimal control aerial ground robot"
+      - "potential field UAV UGV"
+      - "Lyapunov UAV UGV cooperation"
+      - "decentralized control aerial ground"
+    max_results_per_keyword: 20
+    arxiv_categories: ["cs.RO", "cs.SY"]
+
+  # --- Block 5: Multi-agent theory supporting UAV-UGV ---
+  - name: "Multi-Agent Theory for Aerial-Ground"
+    keywords:
+      - "swarm coordination aerial ground"
+      - "multi robot communication aerial ground"
+      - "heterogeneous swarm UAV UGV"
+      - "multi agent task allocation UAV UGV"
+      - "distributed coordination heterogeneous aerial ground"
+    max_results_per_keyword: 20
+    arxiv_categories: ["cs.RO", "cs.MA", "cs.AI"]
+
+# =============================================================
+# Venue Scoring Tiers
+# =============================================================
+venue_tiers:
+  tier1:
+    patterns:
+      # --- Robotics top ---
+      - "\\bICRA\\b"
+      - "\\bIROS\\b"
+      - "\\bRA-?L\\b"
+      - "Robotics and Automation Letters"
+      - "\\bRSS\\b"
+      - "\\bCoRL\\b"
+      - "\\bIJRR\\b"
+      - "International Journal of Robotics Research"
+      - "\\bT-?RO\\b"
+      - "Transactions on Robotics"
+      - "Science Robotics"
+      # --- AI top ---
+      - "\\bNeurIPS\\b"
+      - "\\bNIPS\\b"
+      - "\\bICML\\b"
+      - "\\bICLR\\b"
+      - "\\bCVPR\\b"
+      - "\\bAAAI\\b"
+      - "\\bIJCAI\\b"
+    score: 15
+
+  tier2:
+    patterns:
+      - "\\bAAMAS\\b"
+      - "\\bECCV\\b"
+      - "\\bICCV\\b"
+      - "Autonomous Robots"
+      - "\\bCDC\\b"
+      - "\\bACC\\b"
+      - "\\bIFAC\\b"
+      - "\\bRLC\\b"
+      - "\\bICUAS\\b"
+      - "\\bWAFR\\b"
+      - "\\bISRR\\b"
+    score: 10
+
+  tier3:
+    patterns:
+      - "\\bAIAA\\b"
+      - "\\bECC\\b"
+      - "\\bROBIO\\b"
+      - "\\bSII\\b"
+      - "Workshop"
+    score: 5
+
+# =============================================================
+# Relevance Keywords — fine-grained, UAV-UGV anchored
+# =============================================================
+# critical: must-have terms (+8 title / +4 abstract)
+# high:     core topic terms (+5 title / +2 abstract)
+# medium:   supporting terms (+2 title / +1 abstract)
+# max_score: cap
+relevance_keywords:
+  max_score: 45
+  critical:
+    - "UAV-UGV"
+    - "UAV UGV"
+    - "aerial-ground"
+    - "aerial ground"
+    - "air-ground"
+    - "air ground"
+  high:
+    - "UAV"
+    - "UGV"
+    - "unmanned aerial"
+    - "unmanned ground"
+    - "heterogeneous robot"
+    - "coordination"
+    - "cooperative"
+    - "collaboration"
+    - "formation control"
+    - "synchronization"
+  medium:
+    - "multi-robot"
+    - "multi-agent"
+    - "swarm"
+    - "path planning"
+    - "trajectory"
+    - "decentralized"
+    - "distributed"
+    - "communication"
+    - "consensus"
+    - "velocity control"
+    - "reinforcement learning"
+    - "model predictive"
+    - "task allocation"
+
+# =============================================================
+# Scoring weights
+# =============================================================
+# Relevance(45) + Bonus(30) + Venue(15) + Impact(10) = 100
+scoring_weights:
+  relevance_max: 45
+  bonus_code: 15
+  bonus_demo: 15
+  venue_max: 15
+  impact_max: 10
